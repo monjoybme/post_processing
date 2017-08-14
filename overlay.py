@@ -14,9 +14,18 @@ University of Warwick, UK.
 
 ######################################################################################
 
-# Overlay options
+# Overlay variables
 overlay_type = 'draw_boundary'   # choose from 'mask_overlay' and 'draw_boundary'
 colour = 'green'  # choose from 'red', 'green' or 'blue'
+
+mask_ext = '.png'
+wsi_ext = '.svs'
+
+pathWsi = '/pathWsi/'
+pathMask = '/pathMask/'
+outPath = '/outPath/'
+
+######################################################################################
 
 if overlay_type == 'mask_overlay':
 	alpha = 0.65  # parameter that controls transparency
@@ -38,13 +47,6 @@ elif overlay_type == 'draw_boundary':
 		rgb = (0,0,255)
 
 ######################################################################################
-
-mask_ext = '.png'
-wsi_ext = '.svs'
-
-pathWsi = '/pathWsi/'
-pathMask = '/pathMask/'
-outPath = '/outPath/'
 
 list_images = glob.glob(pathMask + '*' + mask_ext)
 num_images = len(list_images)
